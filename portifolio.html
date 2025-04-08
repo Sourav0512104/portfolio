@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(160deg, tomato, rgb(69, 69, 207));
+      font-family: sans-serif;
+      color: white;
+    }
+
+    .nav-container {
+      position: fixed;
+      top: 20px;
+      left: 80px;
+      z-index: 1000;
+    }
+
+    .list {
+      display: flex;
+      gap: 30px;
+      padding: 10px 20px;
+      border-radius: 20px;
+      background-color: rgba(255, 255, 255, 0.1);
+      list-style: none;
+      font-size: large;
+    }
+
+    .list_element a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .list_element:hover {
+      background-color: rgba(39, 28, 28, 0.1);
+      cursor: pointer;
+    }
+
+    .home {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      padding: 30px;
+      gap: 50px;
+      flex-wrap: wrap;
+      text-align: center;
+    }
+
+    .aboutMe {
+      max-width: 600px;
+    }
+
+    .image {
+      width: 400px;
+      height: auto;
+      border-radius: 20px;
+    }
+
+    .edu, .skills-section, .contact-section {
+      text-align: center;
+      padding: 50px 20px;
+      min-height: 100vh;
+    }
+
+    .paragraph {
+      display: flex;
+      gap: 50px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .paragraph1, .paragraph2 {
+      width: 300px;
+      padding: 20px;
+      border-radius: 15px;
+      margin-top: 10px;
+      text-align: center;
+      transition: all 0.3s ease;
+      background-color: rgba(255, 255, 255, 0.05);
+    }
+
+    .paragraph1:hover, .paragraph2:hover, .skill-box:hover {
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .skills-container {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+
+    .skill-box {
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 20px 40px;
+      border-radius: 15px;
+      font-size: 1.2rem;
+      transition: all 0.3s ease;
+      min-width: 100px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      max-width: 500px;
+      margin: 30px auto;
+      text-align: left;
+    }
+
+    input, textarea {
+      padding: 10px;
+      font-size: 1rem;
+      border-radius: 10px;
+      border: none;
+      outline: none;
+      width: 100%;
+    }
+
+    textarea {
+      height: 150px;
+      resize: vertical;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 10px;
+      background-color: white;
+      color: black;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      width: fit-content;
+      align-self: center;
+    }
+
+    button:hover {
+      background-color: lightgray;
+    }
+    @media (max-width: 800px) {
+      .nav-container {
+        left: 20px;
+      }
+
+      .list {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+        align-items: flex-start;
+      }
+
+      .home {
+        flex-direction: column;
+        padding: 20px;
+        text-align: center;
+      }
+
+      .image {
+        width: 80%;
+      }
+
+      .paragraph {
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .skills-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+      }
+
+      form {
+        width: 90%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .image {
+        width: 100%;
+      }
+
+      .skill-box {
+        font-size: 1rem;
+        padding: 15px 25px;
+      }
+
+      button {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="nav-container">
+    <ul class="list">
+      <li class="list_element"><a href="#home">Home</a></li>
+      <li class="list_element"><a href="#edu">Education</a></li>
+      <li class="list_element"><a href="#skills">Skills</a></li>
+      <li class="list_element"><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+
+  <div id="home" class="home">
+    <img class="image" src="pic.png" />
+    <div class="aboutMe">
+      <h1>About Me</h1>
+      <p>
+        I am a passionate developer with exposure to various field of technical expertise. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur, perspiciatis?
+      </p>
+    </div>
+  </div>
+
+  <div id="edu" class="edu">
+    <h1><u>Education</u></h1>
+    <div class="paragraph">
+      <div class="paragraph1">
+        <h2 style="color:rgb(193, 232, 23);"><u>School</u></h2>
+        <p>Studied in Bishop Cotton Boys' School</p>
+      </div>
+      <div class="paragraph2">
+        <h2 style="color:rgb(193, 232, 23);"><u>College/University</u></h2>
+        <p>Pursuing Computer Science Engineering in R.V College of Engineering</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="skills" class="skills-section">
+    <h1><u>Skills</u></h1>
+    <div class="skills-container">
+      <div class="skill-box">HTML</div>
+      <div class="skill-box">CSS</div>
+      <div class="skill-box">Java</div>
+      <div class="skill-box">Python</div>
+      <div class="skill-box">C</div>
+    </div>
+  </div>
+
+  <div id="contact" class="contact-section">
+    <h1><u>Contact</u></h1>
+    <form>
+      <input type="text" placeholder="Enter your name"  />
+      <input type="email" placeholder="Enter your email" />
+      <textarea placeholder="Enter your message"></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+</body>
+</html>
